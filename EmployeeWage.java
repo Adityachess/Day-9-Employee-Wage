@@ -2,6 +2,10 @@ package com.bridgelabz.employeewage;
 
 public class EmployeeWage {
 	
+	int wagePerHour = 20;
+	int dailyHour = 8;
+	int dailyWage;
+	
 
 	public void employeeAttendence() {
 
@@ -22,6 +26,13 @@ public class EmployeeWage {
 	}
 	
 	
+	public void dailyWage() {
+
+		dailyWage = wagePerHour * dailyHour;
+		System.out.println("Employee Daily wage = " + dailyWage);
+	}
+	
+	
 
 	public static void main(String[] args) {
 
@@ -30,6 +41,8 @@ public class EmployeeWage {
 		EmployeeWage object = new EmployeeWage();
 		
 		object.employeeAttendence();
+		
+		object.dailyWage();
 		
 	
 		
