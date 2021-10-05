@@ -4,6 +4,8 @@ public class EmployeeWage {
 	
 	int wagePerHour = 20;
 	int dailyHour = 8;
+	int partTimeHours = 4;
+	int partTimeWage;
 	int dailyWage;
 	
 
@@ -32,6 +34,12 @@ public class EmployeeWage {
 		System.out.println("Employee Daily wage = " + dailyWage);
 	}
 	
+	public void employeePartTimeWage() {
+
+		partTimeWage = wagePerHour * partTimeHours;
+		System.out.println("Employee Part Time Wage :" + partTimeWage);
+	}
+	
 	
 
 	public static void main(String[] args) {
@@ -43,6 +51,8 @@ public class EmployeeWage {
 		object.employeeAttendence();
 		
 		object.dailyWage();
+		
+		object.employeePartTimeWage();
 		
 	
 		
