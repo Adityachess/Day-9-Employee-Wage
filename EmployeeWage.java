@@ -7,10 +7,11 @@ public class EmployeeWage {
 	int wagePerHour = 20;
 	int dailyHour = 8;
 	int partTimeHours = 4;
+	int daysPerMonth = 20;
 	int partTimeWage;
 	int employeeHour;
 	int dailyWage;
-	
+	int monthlyWage;
 
 	public void employeeAttendence() {
 
@@ -61,7 +62,15 @@ public class EmployeeWage {
 			System.out.println("Absent");
 			break;
 		}
+		System.out.println();
 	}
+	
+	public void monthlyWage() {
+
+		monthlyWage = dailyWage * daysPerMonth;
+		System.out.println("Monthly Wage Of Employee is =" + monthlyWage);
+	}
+
 
 	
 
@@ -78,6 +87,8 @@ public class EmployeeWage {
 		object.employeePartTimeWage();
 		
 		object.bySwitchCase();
+		
+		object.monthlyWage();
 		
 	
 		
