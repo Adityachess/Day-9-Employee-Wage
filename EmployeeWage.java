@@ -8,6 +8,8 @@ public class EmployeeWage {
 	int dailyHour = 8;
 	int partTimeHours = 4;
 	int daysPerMonth = 20;
+	int totalHours = 100;
+	int totalDays = 20;
 	int partTimeWage;
 	int employeeHour;
 	int dailyWage;
@@ -70,6 +72,46 @@ public class EmployeeWage {
 		monthlyWage = dailyWage * daysPerMonth;
 		System.out.println("Monthly Wage Of Employee is =" + monthlyWage);
 	}
+	
+	public void calculateWagesTillGivenCond() {
+
+		int empWage = 0;
+		int totalEmpWage = 0;
+		int totalWorkingDays = 0;
+		int totalEmpHours = 0;
+
+		while (totalEmpHours <= totalHours && totalWorkingDays < totalDays) {
+			totalWorkingDays++;
+
+			int empCheck = (int) (Math.floor(Math.random() * 10) % 3);
+
+			System.out.println("Random Integers: " + empCheck);
+
+			switch (empCheck) {
+			case 1:
+				employeeHour = 8;
+				System.out.print(" Present");
+				break;
+			case 2:
+				employeeHour = 4;
+				System.out.print("Part time Present " );
+				break;
+			case 0:
+				employeeHour = 0;
+				System.out.println("Absent");
+				break;
+
+			}
+
+			empWage = employeeHour * wagePerHour;
+
+			totalEmpWage = totalEmpWage + empWage;
+
+			System.out.println("Day " + totalWorkingDays +  " empHours :" + employeeHour);
+			System.out.println(" Wage :" + totalEmpWage);
+			System.out.println(" Total Wage :" + totalEmpWage);
+		}
+	}
 
 
 	
@@ -89,6 +131,8 @@ public class EmployeeWage {
 		object.bySwitchCase();
 		
 		object.monthlyWage();
+		
+		object.calculateWagesTillGivenCond();
 		
 	
 		
