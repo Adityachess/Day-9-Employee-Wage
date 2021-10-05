@@ -1,8 +1,9 @@
 package com.bridgelabz.employeewage;
 
 public class EmployeeWage {
+	
 
-	public void employeeAttdence() {
+	public void employeeAttendence() {
 
 		int empCheck = (int) (Math.random() * 10) % 2;
 
@@ -19,10 +20,20 @@ public class EmployeeWage {
 
 		System.out.println();
 	}
+	
+	
 
 	public static void main(String[] args) {
 
 		System.out.println("Welcome to employee wage Calculation Computation Program");
+		
+		EmployeeWage object = new EmployeeWage();
+		
+		object.employeeAttendence();
+		
+	
+		
+		
 
 	}
 
